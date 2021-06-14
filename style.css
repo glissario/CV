@@ -41,7 +41,7 @@ color: #F3F8F2;
 
 
 nav > * + * {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .main{
