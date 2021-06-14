@@ -9,6 +9,7 @@
 body {
     margin 0;
     margin-left: 10px;
+    background-color: #F3F8F2;
 }
   
 h1,h2,h3,h4,h5,h6 {
@@ -20,13 +21,46 @@ h1,h2,h3,h4,h5,h6 {
 padding: 50px;
 padding-bottom: 10px;
 text-align: center;
-background-color: rgb(214, 212, 212);
+background-color: #3581B8;
+color: #F3F8F2;
+}
+
+.nav_links{
+    color: #3581B8;
+    background-color: #F3F8F2 ;
+    ;
+}
+
+.nav_links:hover {
+    background-color:#DEE2D6;
+}
+.nav_links:active {
+
+    background-color: #FCB07E;
 }
 
 
+nav > * + * {
+    margin-left: 20px;
+}
+
 .main{
 max-width: 800px;
-padding: 40px;
-padding-top: 20px;
-border-left:3px rgb(214, 212, 212) solid;
+padding: 30px;
+padding-top: 1px;
+/*border-left:3px #DEE2D6 solid;*/
+}
+
+.main > * + * {
+margin-top: 35px;
+border-top: 3px #DEE2D6 solid;
+}
+
+.poker::after{  
+    content: "♣️♠️♥️♦️"
+}
+
+*::selection{
+    color: honeydew;
+    background-color: #FCB07E;
 }
