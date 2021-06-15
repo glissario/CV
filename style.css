@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .header{
-padding: 50px;
+padding: 10px;
 padding-bottom: 10px;
 text-align: center;
 background-color: #3581B8;
@@ -94,4 +94,31 @@ border-top: 3px #DEE2D6 solid;
 .navbutton:active {
 	position:relative;
 	top:1px;
+}
+
+/*:target h3::first-letter {
+    color: #f8c19c;
+  }*/
+
+  .article-heading {
+    position: relative;
+    left: -20px;
+  }
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
+
+.hire-me{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 10px;
+    border: 2px #FCB07E solid;
+    background-color: #F3F8F2;
+    color: #3581B8;
 }
