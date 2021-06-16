@@ -8,26 +8,39 @@
   
 html{
     font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 
 }
 
 body {
     margin 0;
-    margin-left: 10px;
+    margin-left: 1rem;
     background-color: #F3F8F2;
 }
   
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Montserrat', sans-serif;
+    
 }
 
-
 .header{
-padding: 10px;
-padding-bottom: 10px;
+padding: 1rem;
+padding-bottom: 1rem;
 text-align: center;
 background-color: #3581B8;
 color: #F3F8F2;
+}
+
+.headings{
+    font-size: 4rem;
+}
+
+.main-heading{
+    font-size: 1em;
+}
+
+.sub-heading{
+    font-size: 0.25em;
 }
 
 .nav_links{
@@ -39,27 +52,31 @@ color: #F3F8F2;
 
 .nav_links:hover {
     background-color:#DEE2D6;
+    transition: 1s;
 }
 .nav_links:active {
-
     background-color: #FCB07E;
+    transition: 1s;
 }
 
 
 nav > * + * {
-    margin-left: 10px;
+    margin-left: 1.2rem;
 }
 
 .main{
-max-width: 800px;
-padding: 30px;
+
+padding: 2.5rem;
 padding-top: 1px;
 /*border-left:3px #DEE2D6 solid;*/
+max-width: 70ch;
+margin: 0 auto;
 }
 
 .main > * + * {
-margin-top: 35px;
-border-top: 3px #DEE2D6 solid;
+margin-top: 3rem;
+border-top: .2rem #DEE2D6 solid;
+padding: 0 1.5rem;
 }
 
 .poker::after{  
@@ -90,19 +107,21 @@ border-top: 3px #DEE2D6 solid;
 .navbutton:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 	background-color:#019ad2;
+
 }
 .navbutton:active {
 	position:relative;
 	top:1px;
 }
 
-/*:target h3::first-letter {
+/*target h3::first-letter {
     color: #f8c19c;
-  }*/
+}*/
 
   .article-heading {
     position: relative;
-    left: -20px;
+    left: -5rem;
+    outline: 1px hotpink solid;
   }
 
 .experience-heading {
