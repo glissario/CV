@@ -1,126 +1,128 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 /* {
     font-family: 'Open Sans', sans-serif;
-}*/  
-  
-html{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+}*/
 
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
 }
 
 body {
-    margin 0;
-    margin-left: 1rem;
-    background-color: #F3F8F2;
-}
-  
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Montserrat', sans-serif;
-    
+  margin: 0;
+  margin-left: 1rem;
+  background-color: #f3f8f2;
 }
 
-.header{
-padding: 1rem;
-padding-bottom: 1rem;
-text-align: center;
-background-color: #3581B8;
-color: #F3F8F2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
-.headings{
-    font-size: 4rem;
+.header {
+  padding: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background-color: #3581b8;
+  color: #f3f8f2;
 }
 
-.main-heading{
-    font-size: 1em;
+.headings {
+  font-size: 4rem;
 }
 
-.sub-heading{
-    font-size: 0.25em;
+.main-heading {
+  font-size: 1em;
 }
 
-.nav_links{
-    color: #3581B8;
-    background-color: #F3F8F2 ;
-    text-decoration: none;
-    outline: 1px #FCB07E solid;
+.sub-heading {
+  font-size: 0.25em;
+}
+
+.nav_links {
+  color: #3581b8;
+  background-color: #f3f8f2;
+  text-decoration: none;
+  outline: 1px #fcb07e solid;
 }
 
 .nav_links:hover {
-    background-color:#DEE2D6;
-    transition: 1s;
+  background-color: #dee2d6;
+  transition: 1s;
 }
 .nav_links:active {
-    background-color: #FCB07E;
-    transition: 1s;
+  background-color: #fcb07e;
+  transition: 1s;
 }
-
 
 nav > * + * {
-    margin-left: 1.2rem;
+  margin-left: 0.8rem;
 }
 
-.main{
-
-padding: 2.5rem;
-padding-top: 1px;
-/*border-left:3px #DEE2D6 solid;*/
-max-width: 70ch;
-margin: 0 auto;
+.main {
+  padding: 2.5rem;
+  padding-top: 1px;
+  /*border-left:3px #DEE2D6 solid;*/
+  max-width: 80ch;
+  _margin: 0 auto;
 }
 
 .main > * + * {
-margin-top: 3rem;
-border-top: .2rem #DEE2D6 solid;
+  margin-top: 3rem;
+  border-top: 0.2rem #dee2d6 solid;
 }
 
-.poker::after{  
-    content: "♣️♠️♥️♦️"
+.poker::after {
+  content: "♣️♠️♥️♦️";
 }
 
-*::selection{
-    color: honeydew;
-    background-color: #FCB07E;
+*::selection {
+  color: honeydew;
+  background-color: #fcb07e;
 }
 
 .navbutton {
-	box-shadow: 0px 1px 0px 0px #f0f7fa;
-	background:linear-gradient(to bottom, #33bdef 5%, #3581B8 100%);
-	background-color: #3581B8;
-	border-radius:6px;
-	border:1px solid #057fd0;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family: 'Montserrat', sans-serif;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #5b6178;
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #33bdef 5%, #3581b8 100%);
+  background-color: #3581b8;
+  border-radius: 6px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #5b6178;
 }
 .navbutton:hover {
-	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-	background-color:#019ad2;
-
+  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color: #019ad2;
 }
 .navbutton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 /*target h3::first-letter {
     color: #f8c19c;
 }*/
 
-  .article-heading {
-    position: relative;
-    left: -1rem;
-  }
+.article-heading {
+  position: relative;
+  left: -1rem;
+}
 
 .experience-heading {
   display: inline-block;
@@ -130,12 +132,60 @@ border-top: .2rem #DEE2D6 solid;
   display: inline-block;
 }
 
-.hire-me{
+.hire-me {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  padding: 10px;
+  border: 2px #fcb07e solid;
+  background-color: #f3f8f2;
+  color: #3581b8;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    _background-color: blue;
+  }
+  .main > * + * {
+    margin-top: 1.75rem;
+    padding-top: 1.75rem;
+  }
+
+  .hire-me {
     position: absolute;
     right: 16px;
     top: 16px;
     padding: 10px;
-    border: 2px #FCB07E solid;
-    background-color: #F3F8F2;
-    color: #3581B8;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+  body {
+    _background-color: pink;
+  }
+  .main > * + * {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  .hire-me {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 15px;
+  }
+}
+
+@media print {
+  .nav_links {
+    display: none;
+  }
+  .hire-me {
+    display: none;
+  }
 }
