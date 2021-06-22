@@ -16,7 +16,13 @@ html {
 body {
   margin: 0;
   margin-left: 1rem;
-  background-color: #f3f8f2;
+  --head-background-color: #3581b8;
+  --head-color: #f3f8f2;
+  --main-color: black;
+  --main-background-color: #f3f8f2;
+  --border-color: #fcb07e;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
 }
 
 h1,
@@ -32,12 +38,19 @@ h6 {
   padding: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-  background-color: #3581b8;
-  color: #f3f8f2;
+  background: linear-gradient(
+    138deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(53, 129, 184, 1) 27%,
+    rgba(53, 129, 184, 1) 65%,
+    rgba(255, 255, 255, 1) 94%
+  );
+
+  color: var(--head-color);
 }
 
 .headings {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .main-heading {
@@ -45,23 +58,39 @@ h6 {
 }
 
 .sub-heading {
-  font-size: 0.25em;
+  font-size: 0.35em;
+}
+
+.nav_align {
+  display: flex;
+  flex-direction: column;
+  _width: 70px;
+  align-items: center;
 }
 
 .nav_links {
-  color: #3581b8;
-  background-color: #f3f8f2;
+  color: var(--head-background-color);
+  background-color: var(--head-color);
   text-decoration: none;
-  outline: 1px #fcb07e solid;
+  outline: 2px var(--border-color) solid;
+  width: 5.5rem;
+  margin: 0.5rem;
+  transition: 1s;
 }
 
 .nav_links:hover {
-  background-color: #dee2d6;
+  background-color: var(--head-background-color);
+  color: var(--head-color);
   transition: 1s;
 }
+
 .nav_links:active {
-  background-color: #fcb07e;
+  background-color: var(--border-color);
   transition: 1s;
+}
+
+.nav_links:focus {
+  outline: 5px var(--border-color) dashed;
 }
 
 nav > * + * {
@@ -78,7 +107,7 @@ nav > * + * {
 
 .main > * + * {
   margin-top: 3rem;
-  border-top: 0.2rem #dee2d6 solid;
+  border-top: 0.2rem var(--head-background-color) solid;
 }
 
 .poker::after {
@@ -86,38 +115,9 @@ nav > * + * {
 }
 
 *::selection {
-  color: honeydew;
-  background-color: #fcb07e;
+  color: var(--head-color);
+  background-color: var(--border-color);
 }
-
-.navbutton {
-  box-shadow: 0px 1px 0px 0px #f0f7fa;
-  background: linear-gradient(to bottom, #33bdef 5%, #3581b8 100%);
-  background-color: #3581b8;
-  border-radius: 6px;
-  border: 1px solid #057fd0;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px -1px 0px #5b6178;
-}
-.navbutton:hover {
-  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-  background-color: #019ad2;
-}
-.navbutton:active {
-  position: relative;
-  top: 1px;
-}
-
-/*target h3::first-letter {
-    color: #f8c19c;
-}*/
 
 .article-heading {
   position: relative;
@@ -125,11 +125,10 @@ nav > * + * {
 }
 
 .experience-heading {
-  display: inline-block;
-}
-
-.experience-subheading {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .hire-me {
@@ -137,18 +136,28 @@ nav > * + * {
   right: 13px;
   top: 13px;
   padding: 10px;
-  border: 2px #fcb07e solid;
-  background-color: #f3f8f2;
-  color: #3581b8;
+  border: 2px var(--border-color) solid;
+  background-color: var(--head-color);
+  color: var(--head-background-color);
+}
+
+.footer {
+  text-align: center;
+  background: linear-gradient(
+    138deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(53, 129, 184, 1) 27%,
+    rgba(53, 129, 184, 1) 65%,
+    rgba(255, 255, 255, 1) 94%
+  );
+  color: var(--head-color);
 }
 
 @media screen and (min-width: 700px) {
   html {
     font-size: 16px;
   }
-  body {
-    _background-color: blue;
-  }
+
   .main > * + * {
     margin-top: 1.75rem;
     padding-top: 1.75rem;
@@ -160,15 +169,23 @@ nav > * + * {
     top: 16px;
     padding: 10px;
   }
+
+  .nav_align {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .experience-heading {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   html {
     font-size: 20px;
   }
-  body {
-    _background-color: pink;
-  }
+
   .main > * + * {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -187,5 +204,32 @@ nav > * + * {
   }
   .hire-me {
     display: none;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .header {
+    background: linear-gradient(
+      138deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(53, 129, 184, 1) 27%,
+      rgba(53, 129, 184, 1) 65%,
+      rgba(4, 4, 4, 1) 94%
+    );
+  }
+
+  body {
+    --main-color: #f3f8f2;
+    --main-background-color: black;
+  }
+
+  .footer {
+    background: linear-gradient(
+      138deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(53, 129, 184, 1) 27%,
+      rgba(53, 129, 184, 1) 65%,
+      rgba(4, 4, 4, 1) 94%
+    );
   }
 }
